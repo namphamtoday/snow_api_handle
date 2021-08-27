@@ -89,21 +89,21 @@ func Execute(url url.URL, method string, payload string, headers map[string]stri
 }
 
 // GET
-func Get(url url.URL, payload string, headers map[string]string, queryParams map[string]string, filename string) ([]byte, error) {
-	return Execute(url, http.MethodGet, payload, headers, queryParams, filename)
+func Get(url url.URL, payload string, headers map[string]string, queryParams map[string]string) ([]byte, error) {
+	return Execute(url, http.MethodGet, payload, headers, queryParams, "")
 }
 
 // POST
-func Post(url url.URL, payload string, headers map[string]string, queryParams map[string]string, filename string) ([]byte, error) {
-	return Execute(url, http.MethodPost, payload, headers, queryParams, filename)
+func Post(url url.URL, payload string, headers map[string]string, queryParams map[string]string) ([]byte, error) {
+	return Execute(url, http.MethodPost, payload, headers, queryParams, "")
 }
 
 // PUT
-func Put(url url.URL, payload string, headers map[string]string, queryParams map[string]string, filename string) ([]byte, error) {
-	return Execute(url, http.MethodPut, payload, headers, queryParams, filename)
+func Put(url url.URL, payload string, headers map[string]string, queryParams map[string]string) ([]byte, error) {
+	return Execute(url, http.MethodPut, payload, headers, queryParams, "")
 }
 
 // DELETE
-func Delete(url url.URL, payload string, headers map[string]string, queryParams map[string]string, filename string) ([]byte, error) {
-	return Execute(url, http.MethodDelete, payload, headers, queryParams, filename)
+func Delete(url url.URL, payload string, headers map[string]string, queryParams map[string]string) ([]byte, error) {
+	return Execute(url, http.MethodDelete, payload, headers, queryParams, "")
 }
